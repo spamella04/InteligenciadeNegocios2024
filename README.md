@@ -8,15 +8,17 @@ Cada estudiante subira sus trabajos en su rama que se llamara igual a su nombre.
 Realizar push a tu rama por primera vez:
 
 Crea una nueva carpeta y dentro de esa carpeta desde gitbash ejecuta "git clone <URL-del-repositorio>". 
-Se creara la carpeta "InteligenciadeNegocios2024", dentro de esta carpeta vas a trabajar y crear las carpetas correspiendtes(ClasePractica1 / TareaU3T2).
+
+Se creara la carpeta "InteligenciadeNegocios2024".
+Dentro de esta carpeta vas a trabajar y crear las carpetas correspiendtes(ClasePractica1 / TareaU3T2).
 
 Luego utiliza estos comandos:
 
-git checkout tu-nombre
-git pull origin main (si se actualizo la rama main)
-git add .
-git commit -m "comentario"
-git push origin tu-nombre
+- git checkout tu-nombre
+- git pull origin main (si se actualizo la rama main)
+- git add .
+- git commit -m "comentario"
+- git push origin tu-nombre
 
 Recomendaciones generales para trabajar en tu rama:
 
