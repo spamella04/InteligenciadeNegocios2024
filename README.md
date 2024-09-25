@@ -7,7 +7,7 @@ Cada estudiante subira sus trabajos en su rama que se llamara igual a su nombre.
 
 Realizar push a tu rama por primera vez:
 
-Crea una nueva carpeta y dentro de esa carpeta desde gitbash ejecuta "git clone <URL-del-repositorio>". 
+Crea una nueva carpeta y dentro de esa carpeta desde gitbash ejecuta "git clone URLdelrepositorio". 
 
 Se creara la carpeta "InteligenciadeNegocios2024".
 Dentro de esta carpeta vas a trabajar y crear las carpetas correspiendtes(ClasePractica1 / TareaU3T2).
