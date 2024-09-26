@@ -94,15 +94,15 @@ if 'Text' in data.columns:
     
 
     print(f'Tamaño de la bolsa de palabras: {len(vectorizer.get_feature_names_out())}')
-    print(x[:5].toarray())
 
     # Pruebas para la precisión del modelo
-    model = LogisticRegression(max_iter=5000) # Si no se establecia un maximo para interar, colapsaba la terminal
+    model = LogisticRegression(max_iter=5000) # Si no se establecia un maximo para iterar, colapsaba la terminal
     model.fit(x, y)
     y_pred = model.predict(x_test)
 
     # Matriz 
     matriz = confusion_matrix(y_test, y_pred)
+    print('\n Matriz de confusión \n')
     print(matriz)
 
     # Reporte 
