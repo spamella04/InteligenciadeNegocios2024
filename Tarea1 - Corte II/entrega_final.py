@@ -1,5 +1,4 @@
 import pandas as pd
-import plotly.express as px
 import nltk
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
@@ -40,8 +39,15 @@ url = 'https://media.githubusercontent.com/media/cdtoruno/review-csv/refs/heads/
 df = pd.read_csv(url)
 df.head()
 
-fig = px.histogram(df, x='Score', title='Distribution of Scores')
-fig.show()
+# Corteo para el grafico de barras de score
+score_counts = df['Score'].value_counts().sort_index()
+
+plt.figure(figsize=(10, 5))
+plt.bar(score_counts.index, score_counts.values, color='blue', edgecolor='black')
+plt.title('Distribution of Scores')
+plt.xlabel('Score')
+plt.ylabel('Frequency')
+plt.show()
 
 df['Sentiment'] = np.where(df['Score'] > 3, 1, np.where(df['Score'] < 3, -1, 0))
 
@@ -52,21 +58,31 @@ crear_nube(df_positive, 'Text')
 crear_nube(df_negative, 'Text')
 
 df_not_neutral = df[df['Sentiment'] != 0].copy()
-fig = px.histogram(df_not_neutral, x='Sentiment', title='Distribution of Sentiments')
-fig.show()
+
+# Graficod de sentiments
+sentiment_counts = df_not_neutral['Sentiment'].value_counts().sort_index()
+
+plt.figure(figsize=(10, 5))
+plt.bar(sentiment_counts.index, sentiment_counts.values, color='green', edgecolor='black')
+plt.title('Distribution of Sentiments')
+plt.xlabel('Sentiment')
+plt.ylabel('Frequency')
+plt.show()
 
 # Paso 5
 df_not_neutral['Summary'] = df_not_neutral['Summary'].copy().fillna('').astype(str)
 df_not_neutral['Summary'] = df_not_neutral['Summary'].copy().apply(lambda x: re.sub(r'[^\w\s]','', x))
 
 df_final = df_not_neutral[['Summary', 'Sentiment']]
-
 df_training = df_final.sample(frac=0.8, random_state=2024)
 df_test = df_final.drop(df_training.index)
+
 
 vectorizer = CountVectorizer()
 x_training = vectorizer.fit_transform(df_training['Summary'])
 x_test = vectorizer.transform(df_test['Summary'])
+
+
 y_training = df_training['Sentiment']
 y_test = df_test['Sentiment']
 
@@ -85,5 +101,3 @@ print(confusion_matrix(y_test, y_pred))
 class_report = classification_report(y_test, y_pred)
 print("Classification Report:")
 print(class_report)
-
-
