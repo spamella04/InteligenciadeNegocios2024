@@ -102,9 +102,10 @@ if 'Text' in data.columns:
 
     # Matriz 
     matriz = confusion_matrix(y_test, y_pred)
-    print('\n Matriz de confusión \n')
+    print('\n Matriz de confusión')
     print(matriz)
 
     # Reporte 
+    print('\n Reporte de clasificación')
     reporte = classification_report(y_test, y_pred)
     print(reporte)
