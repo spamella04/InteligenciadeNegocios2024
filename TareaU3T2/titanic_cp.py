@@ -95,6 +95,10 @@ plt.show()
 # print(data['Age'].unique())
 data['GrupoEdad'] = pd.cut(data['Age'], bins=[0, 12, 18, 65, 100], labels=['Niño', 'Adolescente', 'Adulto', 'Anciano'])
 porcentaje_edad = data.groupby('GrupoEdad',observed=False)['Survived'].mean() * 100
+
+# Cantidad de personas por grupo de edad
+print('\nCantidad de personas por grupo de edad')
+print(data['GrupoEdad'].value_counts())
 print(porcentaje_edad)
 
 # Grafico de tasa por edad
