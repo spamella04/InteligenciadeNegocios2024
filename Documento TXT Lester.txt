@@ -1,0 +1,17 @@
+Profe Arlen,
+
+La siguiente rama del repo de inteligencia de negocios, corresponde a
+Lester Rodriguez.
+
+
+El primer trabajo subido fue el de clase practica y fue enviado en tiempo
+y forma, sin embargo no se habia subido como carpeta, al tener la necesidad
+de subir otro trabajo en el mismo repo y rama, fue necesario crear una
+carpeta y mover los archivos del trabajo pasado a esa carpeta nueva, asi que
+por ello es probable que vea que en el siguiente commit vea que el trabajo
+de clase practica tambien fue afectado en dicho commit, no se realizo ningun
+cambio en codigo, solamente fue la organizacion en carpetas, igualmente 
+poseo una captura en la que se observa que el ultimo commit relacionado
+a esos archivos fue hace dos semanas.
+
+Gracias y saludos.
