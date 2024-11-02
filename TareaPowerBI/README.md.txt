@@ -1,5 +1,5 @@
-LAXTraffic es el archivo bpix proveniente de Power BI, este contiene graficos en distintas pestañas generados desde un punto de vista general, vuelos domesticos e internacionales.
+LAXTraffic es el archivo .pbix proveniente de Power BI. Este contiene gráficos en distintas pestañas, generados desde un punto de vista general, así como vuelos domésticos e internacionales.
 
-El archive limpieza.py es el que se incorporo dentro de Power BI para limpiar el dataset y luego generar un nuevo csv titulado "LAXTrafficClean" para posteriormente generar el dashboard.
+El archivo limpieza.py es el que se incorporó dentro de Power BI para limpiar el dataset y luego generar un nuevo archivo CSV titulado "LAXTrafficClean", el cual se utiliza para crear el dashboard.
 
-Para que los botones funciones en el dashboard, es necesario hacer Ctrl+click sobre dicho boton.
+Para que los botones funcionen en el dashboard, es necesario hacer Ctrl + clic sobre cada botón. Cabe destacar que los botones tienen funciones dobles; es decir, cada botón actúa como un filtro y, a la vez, transporta al usuario a otra pestaña.
